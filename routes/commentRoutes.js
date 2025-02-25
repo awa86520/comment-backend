@@ -16,7 +16,7 @@ const express_1 = __importDefault(require("express"));
 const commentController_1 = require("../controllers/commentController"); // ✅ Ensure correct import
 const router = express_1.default.Router();
 // Explicitly type request handler function
-router.get('/comments/:videoId', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+router.get('/comments', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     yield (0, commentController_1.getCommentsAndAnalyze)(req, res);
 }));
 exports.default = router;

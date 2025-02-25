@@ -5,7 +5,7 @@ import { getCommentsAndAnalyze } from '../controllers/commentController'; // ✅
 const router = express.Router();
 
 // Explicitly type request handler function
-router.get('/comments/:videoId', async (req: Request, res: Response) => {
+router.get('/comments', async (req: Request, res: Response) => {
     await getCommentsAndAnalyze(req, res);
 });
 
