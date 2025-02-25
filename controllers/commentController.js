@@ -23,7 +23,8 @@ const extractVideoId = (url) => {
 };
 const getCommentsAndAnalyze = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { videoUrl } = req.body;
+        // const { videoUrl } = req.body;
+        const videoUrl = req.query.videoUrl ;
         if (!videoUrl) {
             return res.status(400).json({ success: false, message: 'YouTube URL is required' });
         }
